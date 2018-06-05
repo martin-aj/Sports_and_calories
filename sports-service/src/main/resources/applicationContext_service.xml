@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+    
+    <security:global-method-security secured-annotations="enabled" />    
+    
+    <!-- ============= DAO ============= -->
+    <import resource="applicationContext_dao.xml"/>
+    
+    
+    <!-- ============= Service ============= -->
+    <bean name="performedActivityService" class="cz.muni.fi.pa165.service.impl.PerformedActivityServiceImpl" /> 
+    <bean name="caloricTableEntryService" class="cz.muni.fi.pa165.service.impl.CaloricTableEntryServiceImpl" />    
+    <bean name="sportActivityService" class="cz.muni.fi.pa165.service.impl.SportActivityServiceImpl" />
+    <bean name="sportsmanService" class="cz.muni.fi.pa165.service.impl.SportsmanServiceImpl" />
+    <bean name="userService" class="cz.muni.fi.pa165.service.impl.UserServiceImpl" />
+    <bean name="userRoleService" class="cz.muni.fi.pa165.service.impl.UserRoleServiceImpl" />
+
+    <bean id="mapper" class="org.dozer.DozerBeanMapper">
+        <property name="mappingFiles">
+            <list>
+                <value>maps/dozerDtoMapping.xml</value>
+            </list>
+        </property>
+    </bean>
+    
+    <bean name="sportActivityValidator" class="cz.muni.fi.pa165.validator.SportActivityValidator" />
+    <bean name="caloricTableEntryValidator" class="cz.muni.fi.pa165.validator.CaloricTableEntryValidator" />
+    <bean name="performedActivityValidator" class="cz.muni.fi.pa165.validator.PerformedActivityValidator" />
+    <bean name="sportsmanValidator" class="cz.muni.fi.pa165.validator.SportsmanValidator" />
+    <bean name="userValidator" class="cz.muni.fi.pa165.validator.UserValidator" />
+    
+</beans>

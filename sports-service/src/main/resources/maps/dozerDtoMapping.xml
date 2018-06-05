@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+          
+    <mapping> 
+        <class-a>cz.muni.fi.pa165.entity.CaloricTableEntry</class-a>
+        <class-b>cz.muni.fi.pa165.sports.api.dto.CaloricTableEntryDto</class-b>
+        
+        <field>
+            <a>sportActivity</a>
+            <b>sportActivity</b>
+            <b-hint>cz.muni.fi.pa165.sports.api.dto.SportActivityDto</b-hint>
+        </field>
+        
+    </mapping>  
+    
+    <mapping> 
+        <class-a>cz.muni.fi.pa165.entity.PerformedActivity</class-a>
+        <class-b>cz.muni.fi.pa165.sports.api.dto.PerformedActivityDto</class-b>
+        
+        <field>
+            <a>sportActivity</a>
+            <b>sportActivity</b>
+            <b-hint>cz.muni.fi.pa165.sports.api.dto.SportActivityDto</b-hint>
+        </field>
+        
+        <field>
+            <a>sportsman</a>
+            <b>sportsman</b>
+            <b-hint>cz.muni.fi.pa165.sports.api.dto.SportsmanDto</b-hint>
+        </field>
+    </mapping> 
+    
+    <mapping> 
+        <class-a>cz.muni.fi.pa165.entity.Sportsman</class-a>
+        <class-b>cz.muni.fi.pa165.sports.api.dto.SportsmanDto</class-b>
+        <field>
+            <a>performedActivities</a>
+            <b>performedActivities</b>
+            <b-hint>cz.muni.fi.pa165.sports.api.dto.PerformedActivityDto</b-hint>
+        </field>
+        
+    </mapping> 
+    
+    <mapping> 
+        <class-a>cz.muni.fi.pa165.entity.SportActivity</class-a>
+        <class-b>cz.muni.fi.pa165.sports.api.dto.SportActivityDto</class-b>
+        
+        <field>
+            <a>performedActivities</a>
+            <b>performedActivities</b>
+            <b-hint>cz.muni.fi.pa165.sports.api.dto.PerformedActivityDto</b-hint>
+        </field>
+        
+        <field>
+            <a>caloricTableEntries</a>
+            <b>caloricTableEntries</b>
+            <b-hint>cz.muni.fi.pa165.sports.api.dto.CaloricTableEntryDto</b-hint>
+        </field>
+    </mapping>
+
+</mappings> 

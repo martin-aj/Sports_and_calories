@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+    
+        
+    <!-- ============= DAO ============= -->
+    <import resource="applicationContext_dao_test.xml"/>
+    
+    
+    <!-- ============= Service ============= -->
+    <bean name="performedActivityService" class="cz.muni.fi.pa165.service.impl.PerformedActivityServiceImpl" /> 
+    
+    <bean name="caloricTableEntryService" class="cz.muni.fi.pa165.service.impl.CaloricTableEntryServiceImpl" />
+    
+    <bean name="sportActivityService" class="cz.muni.fi.pa165.service.impl.SportActivityServiceImpl" />
+    
+    <bean name="sportsmanService" class="cz.muni.fi.pa165.service.impl.SportsmanServiceImpl" />
+    
+    <bean id="mapper" class="org.dozer.DozerBeanMapper">
+        <property name="mappingFiles">
+            <list>
+                <value>maps/dozerDtoMapping.xml</value>
+            </list>
+        </property>
+    </bean>
+    
+</beans>

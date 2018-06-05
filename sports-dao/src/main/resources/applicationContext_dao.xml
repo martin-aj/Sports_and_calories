@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+        
+    <!-- ============= Config ============= -->
+    <import resource="spring-db-config.xml"/>
+    
+    <!-- ============= DAO ============= -->
+    <bean name="caloricTableEntryDao" class="cz.muni.fi.pa165.dao.impl.CaloricTableEntryDaoImpl" />
+    <bean name="performedActivityDao" class="cz.muni.fi.pa165.dao.impl.PerformedActivityDaoImpl" />
+    <bean name="sportActivityDao" class="cz.muni.fi.pa165.dao.impl.SportActivityDaoImpl" />
+    <bean name="sportsmanDao" class="cz.muni.fi.pa165.dao.impl.SportsmanDaoImpl" />
+    <bean name="userDao" class="cz.muni.fi.pa165.dao.impl.UserDaoImpl" />
+    <bean name="userRoleDao" class="cz.muni.fi.pa165.dao.impl.UserRoleDaoImpl" />
+    
+</beans>

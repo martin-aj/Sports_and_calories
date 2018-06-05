@@ -1,0 +1,92 @@
+/*Author: Michal*/
+.error, .msg{
+    color: white;
+    text-align:center;
+    padding:5px;
+    font-size: 14px;
+
+}
+
+
+.error {
+    border: 5px solid #AA1627;
+    background: none repeat scroll 0 0 #DC969F;
+}  
+
+.msg {
+    background: none repeat scroll 0 0 #5cb987;
+    border: 5px solid #007b39;
+    color: white;
+    text-align:center;
+    padding:5px;
+}
+
+body{
+    background: none repeat scroll 0 0 #195f88;
+}
+
+.footer {
+    border-top: 1px solid #fff;
+    font-size: 12px;
+    margin: 10px 25px 0;
+    padding: 15px 0;
+    text-align: center;
+    bottom:0;
+    color:white;
+}
+.footer p, .footer a, .msg p, .error p{
+    color: #fff;
+    font-family: Arial,Helvetica,sans-serif;
+    line-height: 1.5em;
+    list-style: outside none none;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
+#login-box {
+    width: 500px;
+    height: 370px;
+    padding: 20px;
+    margin: 100px auto;
+    background: #619EC2;                                                
+}
+
+h3 {
+    text-align: center;
+    padding:10px 0px 10px;
+    text-shadow: 1px 1px 2px #185477;
+    color: #fff;
+    font-family: Arial,Helvetica,sans-serif;
+    line-height: 1.5em;
+    list-style: outside none none;
+    border-bottom: 1px solid white;
+}               
+
+form {
+    text-align: center;                   
+}
+input {
+    width:100%;
+    text-align:center;
+    transition: all 300ms ease 0s;
+    padding: 10px 0px;  
+    border:none;
+}
+input[type=text], input[type=password] {
+    background: none repeat scroll 0 0 #195f88;
+    color:white;                
+}
+input.loginButton{
+    background: no-repeat scroll 10px center / 32px 32px #2c2c2c;
+    border: 5px solid #1b1b1b;
+    font-weight: bold;       
+    color:white;                
+}
+input.loginButton:hover{
+    background: no-repeat scroll 10px center / 32px 32px #1b1b1b;
+    cursor:pointer;
+}
+
